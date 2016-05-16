@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="MyBU.FeedbackFrame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyBU"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="WhiteSmoke">
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+
+        </Grid.RowDefinitions>
+
+
+        <Button x:Name="button" 
+                Grid.Row="4"
+                Content="Submit" 
+                HorizontalAlignment="Stretch"
+                Margin="80,5,80,5" 
+                VerticalAlignment="Stretch" 
+                MinWidth="120"
+                MaxWidth="170"
+                MinHeight="30"
+                MaxHeight="40"
+                Width="auto"
+                Height="auto"
+                Foreground="WhiteSmoke"
+                Background="#FF930033" 
+                FontWeight="SemiBold" 
+                FontSize="14"/>
+        <Slider x:Name="slider" 
+                HorizontalAlignment="Left" 
+                Margin="25,0,0,25" 
+                VerticalAlignment="Bottom" 
+                Width="225" 
+                LargeChange="1" 
+                Maximum="5" 
+                Minimum="1" 
+                Value="5" 
+                ValueChanged="slider_ValueChanged"/>
+        <TextBlock x:Name="RatingTextBlock" 
+                   HorizontalAlignment="Left" 
+                   Margin="25,25,0,0" 
+                   TextWrapping="Wrap"
+                   Text="Rating:" 
+                   VerticalAlignment="Top"
+                   FontSize="21" 
+                   FontWeight="SemiBold"/>
+        <TextBlock x:Name="CommentsTextBlock" 
+                   Grid.Row="1"
+                    HorizontalAlignment="Left" 
+                   Margin="25,25,0,0" 
+                   TextWrapping="Wrap"
+                   Text="Comments:" 
+                   VerticalAlignment="Top"
+                   FontSize="21" 
+                   FontWeight="SemiBold"/>
+        <TextBox x:Name="textBox"
+                 Margin="25,60,25,10" 
+                 Grid.Row="1" 
+                 TextWrapping="Wrap" 
+                 PlaceholderText="Optional: Enter some comments" 
+                 InputScope="Default" 
+                 Height="auto" 
+                 MinHeight="150"/>
+        <Image x:Name="image" 
+               HorizontalAlignment="Left"
+               Height="50" 
+               Margin="280,0,0,25" 
+               VerticalAlignment="Bottom" 
+               Width="50" 
+               Source="Assets/Five.png"/>
+
+    </Grid>
+</Page>

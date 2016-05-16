@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="MyBU.ProblemFrame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyBU"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="WhiteSmoke">
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+
+        </Grid.RowDefinitions>
+
+
+        <Button x:Name="button" 
+                Grid.Row="4"
+                Content="Submit" 
+                HorizontalAlignment="Stretch"
+                Margin="80,5,80,5" 
+                VerticalAlignment="Stretch" 
+                MinWidth="120"
+                MaxWidth="170"
+                MinHeight="30"
+                MaxHeight="40"
+                Width="auto"
+                Height="auto"
+                Foreground="WhiteSmoke"
+                Background="#FF930033" 
+                FontWeight="SemiBold" 
+                FontSize="14"/>
+        <TextBlock x:Name="RatingTextBlock" 
+                   HorizontalAlignment="Left" 
+                   Margin="25,25,0,0" 
+                   TextWrapping="Wrap"
+                   Text="Category:" 
+                   VerticalAlignment="Top"
+                   FontSize="21" 
+                   FontWeight="SemiBold"/>
+        <ComboBox x:Name="comboBox" 
+                  Grid.Row="0"
+                  HorizontalAlignment="Left" 
+                  Margin="25,65,25,0" 
+                  VerticalAlignment="Top" 
+                  Width="250" 
+                  PlaceholderText="Please select a category..." 
+                  FontSize="14">
+            <ComboBoxItem Content="Slow"></ComboBoxItem>
+            <ComboBoxItem Content="Crashes"></ComboBoxItem>
+            <ComboBoxItem Content="Something Else"></ComboBoxItem>
+        </ComboBox>
+        <TextBlock x:Name="CommentsTextBlock" 
+                   Grid.Row="1"
+                    HorizontalAlignment="Left" 
+                   Margin="25,25,0,0" 
+                   TextWrapping="Wrap"
+                   Text="Comments:" 
+                   VerticalAlignment="Top"
+                   FontSize="21" 
+                   FontWeight="SemiBold"/>
+        <TextBox x:Name="textBox"
+                 Margin="25,60,25,10" 
+                 Grid.Row="1" 
+                 TextWrapping="Wrap" 
+                 PlaceholderText="Optional: Enter some comments" 
+                 InputScope="Default" 
+                 Height="auto" 
+                 MinHeight="150"/>
+
+    </Grid>
+</Page>

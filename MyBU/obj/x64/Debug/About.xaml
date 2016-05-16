@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="MyBU.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyBU"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="WhiteSmoke">
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <TextBlock x:ConnectionId='1' x:Name="Welcome"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center"
+                   Margin="25,0,25,0" 
+                   TextWrapping="Wrap" 
+                   Text="Hello and welcome to the Universal My BU app for Windows 10!" 
+                   FontSize="17" 
+                   FontWeight="SemiBold" 
+                   TextAlignment="Center"/>
+        <TextBlock x:ConnectionId='2' x:Name="AboutMe" 
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center"
+                   Margin="25,0,25,0" 
+                   TextWrapping="Wrap" 
+                   Text="About Me " 
+                   FontSize="21" 
+                   FontWeight="Bold" 
+                   TextAlignment="Center"/>
+        <TextBlock x:ConnectionId='3' x:Name="Name" 
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center"
+                   Margin="25,0,25,0" 
+                   TextWrapping="Wrap" 
+                   Text="My name is Samuel Williamson." 
+                   FontSize="17" 
+                   FontWeight="SemiBold" 
+                   TextAlignment="Center"/>
+        <TextBlock x:ConnectionId='4' x:Name="AboutMeText" 
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center"
+                   Margin="25,0,25,0" 
+                   TextWrapping="Wrap" 
+                   Text="I am currently a Games technology student at Bournemouth University. I have been a Windows enthusiast for many years now as well as an aspiring app developer. After I discovered that Bournemouth University did not have a iBU app for Windows devices, I decided to create my own for those who to own a Windows device." 
+                   FontSize="14" 
+                   FontWeight="Normal" 
+                   TextAlignment="Center"/>
+        <TextBlock x:ConnectionId='5' x:Name="SignOff"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Center"
+                   Margin="25,0,25,0" 
+                   TextWrapping="Wrap" 
+                   Text="I hope you enjoy the app! :)" 
+                   FontSize="14" 
+                   FontWeight="SemiBold" 
+                   TextAlignment="Center"/>
+        <Image x:ConnectionId='6' x:Name="Me"
+               Source="Assets/Me.jpg"
+               Margin="0,0,0,0" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Grid.Row="3"
+               MinHeight="125"
+               MinWidth="125"
+               MaxHeight="175"
+               MaxWidth="175"
+               Stretch="Uniform"/>
+
+    </Grid>
+</Page>
+

@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="MyBU.AppAboutFrame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyBU"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="WhiteSmoke">
+        <TextBlock x:ConnectionId='1' x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="iBU is the official mobile application from Bournemouth University, bringing you a suite of University services straight to your mobile phone or tablet device. It has been developed by the University with input from the Students' Union and students to make sure you receive the best possible experience." VerticalAlignment="Top"/>
+
+<!--
+Share
+
+We want you and all of your fellow students to enjoy using this application, so feel free to share it via Twitter or Facebook using the option in the settings menu.
+
+
+Feedback
+
+We hope you enjoy using iBU and that it makes life at Bournemouth University more enjoyable and accessible.
+
+We would, of course, like to hear your feedback on the app telling us what you like and what further developments could be made. Let us know about your experience with the iBU app here.
+
+
+Support
+
+If you have any issues with iBU then please contact the IT Service Desk with your issue by calling 01202 965515.
+
+
+Supported Operating Systems
+
+Our supported versions are as follows:
+◾ Android: 4.1+
+◾ BlackBerry: OS10+
+◾ iOS: 7+
+
+
+Known issues list
+
+General Use
+◾ Continuous use of Campus Maps can affect battery performance due to the use of Location Services in the background.
+
+Library
+◾ Chat with a Librarian does not work on Blackberry devices
+◾ Chat with a Librarian does not automatically adapt its view for the iPad
+◾ The window resizer changes how the Find & Renew site is displayed on the iPad
+◾ mySearch login screen does not automatically resize for Android devices
+
+Campus Maps
+◾ Depending on map position sometimes the box is cut off the screen when pressing a map marker;
+◾ On the iPad, when selecting a location from the 'Choose locations' button it pulls the map away from the edge to fit the information window perfectly central to the map marker instead of using the available space like it does when you manually touch a map marker;
+◾ On the iPad it is not possible to zoom out completely, only partially;
+◾ The images used for each location have square corners against a curved frame;
+
+About
+◾ The 'Tell Friends About App' function is not available on Android devices;
+◾ The 'Send Feedback' option on iPhone devices does not have a 'Clear' button available;
+
+Bus Info
+◾ Android and BlackBerry devices may require a PDF reader to be installed to view the bus timetables.
+-->
+    </Grid>
+</Page>
+

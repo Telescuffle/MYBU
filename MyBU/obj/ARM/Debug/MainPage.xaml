@@ -1,0 +1,254 @@
+﻿<Page
+    x:Class="MyBU.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyBU"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar Background="#C31063" Foreground="White">
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:ConnectionId='1' Icon="Help" Label="About Me" Foreground="White"                           />
+            <AppBarButton Icon="LikeDislike" Label="Review" Foreground="White"/>
+            <AppBarButton x:ConnectionId='2' Icon="Message" Label="Contact Dev" Foreground="White"                             />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource AppBarBackgroundThemeBrush}">
+        <!--<Grid Background="Red">-->
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="50"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="12*"/>
+
+        </Grid.RowDefinitions>
+        
+
+        
+        <RelativePanel x:ConnectionId='3' Grid.Row="0" 
+                       Grid.Column="2"
+                       Background="#C31063"
+                       Name="Search">
+
+            <Button x:ConnectionId='23' Name="SearchButton" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE11A;" 
+                    FontSize="28" 
+                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Foreground="White"
+                    Background="#00000000"
+                    FontWeight="Bold" 
+                    VerticalAlignment="Stretch" 
+                    HorizontalAlignment="Stretch" 
+                                               
+                    Margin="0,0,0,0" />
+
+        </RelativePanel>
+
+        <RelativePanel x:ConnectionId='4' Grid.Row="0" 
+                       Grid.Column="0"
+                       Background="#930033"
+                       Name="HamburgerMenu">
+
+            <Button x:ConnectionId='21' Name="HamburgerButton" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE700;" 
+                    FontSize="28" 
+                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Foreground="White"
+                    Background="#00000000"
+                    FontWeight="Bold" 
+                    VerticalAlignment="Stretch" 
+                                                  
+                    HorizontalAlignment="Left" 
+                    Margin="0,0,0,0" 
+                    Width="50">
+            </Button>
+
+            <Button x:ConnectionId='22' Name="BackButton" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE112;" 
+                    FontSize="28" 
+                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Foreground="White"
+                    Background="#00000000"
+                    FontWeight="Bold" 
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Left" 
+                    Margin="0,0,0,0" 
+                    Width="50"
+                    Visibility="Collapsed"
+                    IsEnabled="False" 
+                                            >
+            </Button>
+
+        </RelativePanel>
+
+
+        <!--<WebView
+            x:Name="WebpageContent"
+                 Grid.ColumnSpan="3"
+                 Grid.Column="0"
+                 Grid.Row="1"
+                 Grid.RowSpan="1" 
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"
+                 Margin="0,0,0,0"
+                 Source="https://bournemouth.ombiel.co.uk/campusm/home#menu"/>-->
+
+        <Frame x:ConnectionId='5' Name="MainFrame" 
+               Grid.Column="0" 
+               Grid.Row="1" 
+               Grid.RowSpan="1" 
+               Grid.ColumnSpan="3">
+        </Frame>
+
+        <SplitView x:ConnectionId='6' Name="MySplitView" 
+                   Grid.Row="1" 
+                   Grid.ColumnSpan="2"
+                   DisplayMode="Inline"  
+                   OpenPaneLength="225" 
+                   HorizontalAlignment="Left">
+            <SplitView.Pane>
+                <ListBox x:ConnectionId='11' SelectionMode="Single" 
+                                 Name="Hamburger" 
+                                                                              
+                                 Background="#FF060505">
+                    <ListBoxItem x:ConnectionId='12' Name="Home">
+                        <StackPanel Orientation="Horizontal" Padding="0,0,0,0">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE10F;" Foreground="White"/>
+                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20,5,0,5" Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem  IsEnabled="False" Padding="10,0,10,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Top" Text="&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;" Foreground="White" Height="20"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='13' Name="PersonalDetails">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE115;" Foreground="White"/>
+                            <TextBlock Text="Personal Details" VerticalAlignment="Center" Margin="20,5,0,5" Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='14' Name="PersonalAlerts">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xEC24;" Foreground="White"/>
+                            <TextBlock Text="Receive Personal Alerts" VerticalAlignment="Center" Margin="20,5,0,5" Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem  IsEnabled="False" Padding="10,0,10,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Top" Text="&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;" Foreground="White" Height="20"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='15' Name="Feedback">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE15F;" Foreground="White"/>
+                            <TextBlock Text="Feedback" VerticalAlignment="Center" Margin="20,5,0,5"  Foreground="White" />
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='16' Name="Share">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE72D;" Foreground="White"/>
+                            <TextBlock Text="Share" VerticalAlignment="Center" Margin="20,5,0,5" Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem  IsEnabled="False" Padding="10,0,10,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Top" Text="&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;" Foreground="White" Height="20"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='17' Name="About">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE897;" Foreground="White"/>
+                            <TextBlock Text="About" VerticalAlignment="Center" Margin="20,5,0,5" Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='18' Name="Terms">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE132;"  Foreground="White"/>
+                            <TextBlock Text="Terms of Use" VerticalAlignment="Center" Margin="20,5,0,5"  Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem  IsEnabled="False" Padding="10,0,10,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Top" Text="&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;&#xE108;" Foreground="White" Height="20"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='19' Name="SelectProfile">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE13D;" Foreground="White"/>
+                            <TextBlock Text="Select Profile" VerticalAlignment="Center" Margin="20,5,0,5" Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:ConnectionId='20' Name="LogOut">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" VerticalAlignment="Center" Text="&#xE89f;"  Foreground="White"/>
+                            <TextBlock Text="Log Out" VerticalAlignment="Center" Margin="20,5,0,5"  Foreground="White"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
+
+        <!-- Title Pane -->
+        <RelativePanel x:ConnectionId='7' Grid.Row="0" 
+                       Grid.Column="1"
+                       Background="#C31063"
+                       Name="TitlePane">
+
+            <TextBlock x:ConnectionId='10' x:Name="iBUTextBlock" 
+                   Margin="10,0,0,0" 
+                   Text="MY BU"
+                   FontSize="28"
+                   Grid.Row="0"
+                   RelativePanel.AlignVerticalCenterWithPanel="True"
+                   RelativePanel.AlignHorizontalCenterWithPanel="False"
+                   Foreground="White"
+                   FontFamily="Segoe UI" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Center"/>
+
+        </RelativePanel>
+
+        <SplitView x:ConnectionId='8' Name="SearchBar"
+                   Grid.Row="0" 
+                   Grid.Column="1"
+                   Grid.ColumnSpan="1"
+                   DisplayMode="Overlay" 
+                   HorizontalAlignment="Right" 
+                   Margin="0,0,0,0">
+            <SplitView.Pane>
+                <TextBox x:ConnectionId='9' x:Name="SearchBox" 
+                 Grid.Column="1" 
+                  VariableSizedWrapGrid.ColumnSpan="1"
+                 TextWrapping="NoWrap" 
+                 InputScope="Search"
+                 FontSize="18" 
+                 PlaceholderText="Please enter a search term..."
+                 Background="White" 
+                 Margin="0,0,0,0" 
+                 SelectionHighlightColor="#FF930033"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"/>
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+</Page>
+
